@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    font-family: "Lucida Console", Courier, monospace;
+}
+
+nav {
+    background-color: darkmagenta;
+    color: white;
+    height: 69px;
+    width: 100vw;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 22px;
+}
+
+nav li {
+    display: inline;
+}
+
+nav li a {
+    display: inline;
+    color: white;
+    text-align: center;
+    padding: 22px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover, .active {
+    background-color: darkorchid;
+}
+
+main {
+    min-height: 50vh;
+    padding: 20px;
+    text-align: center;
+}
+
+.foto-profile {
+    object-fit: cover;
+    width: 40vw;
+    height: 80vh;
+    float: left;
+}
+
+.data-profile {
+    float: right;
+    text-align: left;
+    width: 50vw;
+}
