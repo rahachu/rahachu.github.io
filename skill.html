@@ -11,12 +11,40 @@
                 <ul style="float: right;">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="profile.html">Profile</a></li>
-                    <li><a class="active" href="skill.html">Skill</a></li>
+                    <li><a class="active" href="skill.html">Highlighted Project</a></li>
                 </ul>
             </div>
         </nav>
         <main>
-            <h1>Coming soon...</h1>
+            <h1>Proyek saya yang berkesan</h1>
         </main>
+        <script>
+            let projects = [
+                {
+                    name: 'Pateron.id',
+                    desc: 'Pateron Indonesia merupakan startup yang bergerak di bidang pendidikan. Proyek ini menggunakan <b>Vue.js</b> sebagai frontend dan <b>Lumen Laravel</b> untuk backend. Menyediakan fitur tryout dan ranking nasional.'
+                },
+                {
+                    name: 'Icon Plus',
+                    desc: 'Proyek yang diterima dari mahasiswa yang sedang mengerjakan Tugas Akhir. Saya membantu bagian implementasi dari ide solusi IT sebuah perusahaan IconPlus. Disini menggunakan Fullstack framework <b>Laravel</b>'
+                },
+                {
+                    name: 'Card Game',
+                    desc: 'Tugas Mata Kuliah Pemrograman Berbasis Objek. Membuat game kartu seperti yugioh dengan karakter avatar. Menggunakan bahasa <b>Java</b> dengan GUI <b>JavaFX</b>. Tugas ini membantu saya memahami penerapan prinsip OOP sangat dalam.'
+                }
+            ]
+            let dom = document.querySelector('main')
+            projects.forEach(project => {
+                dom.innerHTML += `<hr>
+                    <div>
+                        <h3>${project.name}</h3>
+                        <div style="display: flex; justify-content: center; padding: 2em 4em; background-color: gainsboro;">
+                            <img src="projects/${project.name}.gif" alt="Foto Proyek" style="width: 60vw; border: solid plum;">
+                            <p style="padding: 2em 2em;">${project.desc}</p>
+                        </div>
+                    </div>`
+            });
+            dom.innerHTML += "<h2>Masih banyak lagi hal yang telah saya kerjakan namun tidak saya tampilkan diatas karena masih dalam bentuk Command Line Interface</h2>"
+        </script>
     </body>
 </html>
